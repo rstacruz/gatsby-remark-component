@@ -1,48 +1,58 @@
 {
   "name": "@rstacruz/gatsby-remark-component",
   "description": "When you use a React component in your markdown, it will insert it as a div instead of a p",
-  "version": "1.2.0-pre.1",
+  "version": "1.2.1",
   "author": "Hebilicious <xsh4k3@gmail.com>",
+  "bugs": "https://github.com/rstacruz/gatsby-remark-component/issues",
   "contributors": [
     "Rico Sta. Cruz <rstacruz@users.noreply.github.com> (https://www.ricostacruz.com/)"
   ],
-  "main": "lib.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "microbundle": "^0.12.0-next.8",
+    "prettier": "^1.19.1",
+    "release-it": "^12.6.3",
+    "remark": "^11.0.2",
+    "unist-util-visit": "^2.0.2"
+  },
   "files": [
     "src",
-    "lib.js"
+    "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hebilicious/gatsby-remark-component.git"
-  },
-  "dependencies": {},
+  "homepage": "https://github.com/rstacruz/gatsby-remark-component",
   "keywords": [
+    "component",
     "gatsby",
     "gatsby-plugin",
     "gatsby-transformer-remark",
-    "component",
-    "remark",
-    "markdown"
+    "markdown",
+    "remark"
   ],
-  "scripts": {
-    "pretest": "npm run build",
-    "test": "jest",
-    "dev": "rollup -c --watch",
-    "build": "rollup -c",
-    "prepare": "rollup -c",
-    "prepublish": "npm run test"
-  },
   "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "babel-jest": "^24.7.1",
-    "jest": "^24.7.1",
-    "prettier": "^1.16.4",
-    "remark": "^10.0.1",
-    "rollup": "^1.9.0",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-node-resolve": "^4.2.0",
-    "unist-util-visit": "^1.4.0"
-  }
+  "main": "dist/gatsby-remark-component.js",
+  "module": "dist/gatsby-remark-component.module.js",
+  "release-it": {
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/gatsby-remark-component.git"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle --watch",
+    "prepare": "microbundle",
+    "prepublish": "npm run test",
+    "pretest": "microbundle",
+    "release": "release-it",
+    "test": "jest"
+  },
+  "source": "src/index.js"
 }
