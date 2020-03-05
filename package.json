@@ -13,7 +13,6 @@
     "jest": "^25.1.0",
     "microbundle": "^0.12.0-next.8",
     "prettier": "^1.19.1",
-    "release-it": "^12.6.3",
     "remark": "^11.0.2",
     "unist-util-visit": "^2.0.2"
   },
@@ -33,14 +32,6 @@
   "license": "MIT",
   "main": "dist/gatsby-remark-component.js",
   "module": "dist/gatsby-remark-component.module.js",
-  "release-it": {
-    "git": {
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rstacruz/gatsby-remark-component.git"
@@ -51,7 +42,6 @@
     "prepare": "microbundle",
     "prepublish": "npm run test",
     "pretest": "microbundle",
-    "release": "release-it",
     "test": "jest"
   },
   "source": "src/index.js"
