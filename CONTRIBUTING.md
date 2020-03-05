@@ -3,9 +3,12 @@
 Requires Node v10+ and Yarn v1.12+.
 
 ```sh
-# Install dependencies
-yarn
+yarn # Install dependencies
+yarn test # Run tests
+```
 
-# Run tests
-yarn test
+## More commands
+
+```sh
+yarn release # Draft a release
 ```
