@@ -1,5 +1,5 @@
-const Remark = require(`remark`)
-const plugin = require(`../../lib`)
+const Remark = require("remark")
+const plugin = require("../../dist/gatsby-remark-component")
 
 const markdown = "Text test\n<my-component></my-component>\n###Test"
 const markdowns = [markdown]
