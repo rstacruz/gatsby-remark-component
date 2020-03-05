@@ -34,7 +34,7 @@
   "module": "dist/gatsby-remark-component.module.js",
   "publishConfig": {
     "access": "public",
-    "exists": true
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",

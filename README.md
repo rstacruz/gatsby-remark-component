@@ -1,34 +1,30 @@
-> NB: This is an unofficial maintenance fork of [Hebilicious/gatsby-remark-component](https://github.com/Hebilicious/gatsby-remark-component), continued from it's v1.1.3. This fork is published under `@rstacruz/gatsby-remark-component`. You can use this as a drop-in subtitute for `gatsby-remark-component` using Yarn:
->
-> ```sh
-> yarn add gatsby-remark-component@npm:@rstacruz/gatsby-remark-component
-> ```
->
-> The rest of the original README is quoted below. For a list of improvements in this fork, see [CHANGELOG](./CHANGELOG.md).
+<p align='center'>
+<br><a href='https://thenounproject.com/term/components/1286164'><img src='https://user-images.githubusercontent.com/74385/75975632-f9100d80-5f2c-11ea-8c20-72a98b8de15e.png' width='96'></a><br>
+</p>
 
----
+<h1 align='center'>
+gatsby-remark-component
+</h1>
 
-# Gatsby Remark Component [![Build Status](https://travis-ci.org/Hebilicious/gatsby-remark-component.svg?branch=master)](https://travis-ci.org/Hebilicious/gatsby-remark-component) [![npm version](https://badge.fury.io/js/gatsby-remark-component.svg)](https://badge.fury.io/js/gatsby-remark-component)
+<p align='center'>
+Embed components in React inside <em>div</em> wrappers.
+</p>
 
-A gatsby-transformer-remark plugin that change the AST node parent of a custom component to a div.
+<p align='center'>
+<img src='https://img.shields.io/npm/v/@rstacruz/gatsby-remark-component?color=%23303030'>
+</p>
 
-> - [Gatsby](https://www.gatsbyjs.org/)
-> - [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/)
+<br>
+
+A gatsby-transformer-remark plugin that change the AST node parent of a custom component to a div. This is an unofficial maintenance fork of [Hebilicious/gatsby-remark-component](https://github.com/Hebilicious/gatsby-remark-component) continued from its v1.1.3.
 
 ## Install
 
 ```bash
-yarn add gatsby-transformer-remark gatsby-remark-component
+yarn add gatsby-transformer-remark @rstacruz/gatsby-remark-component
 ```
 
-## Release Notes
-
-> v 1.1
-
-- New configuration options!
-- Can now auto-detect your custom components.
-
-## How to use
+## Usage
 
 > Read the great custom component article on the official gatsby remark blog [here](https://using-remark.gatsbyjs.org/custom-components/).
 
@@ -40,14 +36,13 @@ plugins: [
   {
     resolve: "gatsby-transformer-remark",
     options: {
-      plugins: ["gatsby-remark-component"]
+      plugins: ["@rstacruz/gatsby-remark-component"]
     }
   }
 ]
 ```
 
-You can explicitly declare the name of the components if you want to be strict. (it will disable the auto-detection
-)
+You can explicitly declare the name of the components if you want to be strict.
 
 ```js
 plugins: [
@@ -65,7 +60,12 @@ plugins: [
 ]
 ```
 
-When you start gatsby, your queries will be built from your components, and gatsby-remark-components will update the AST tree.
+## How it works
+
+When you start Gatsby, your queries will be built from your components, and gatsby-remark-components will update the AST tree.
+
+<details>
+<summary>Technical details...</summary>
 
 This will convert this graphql result:
 
@@ -153,3 +153,5 @@ Some text
 ```
 
 This will render your component without any validateDOMNesting warning.
+
+</details>
