@@ -1,6 +1,4 @@
-<p align='center'>
-<br><a href='https://thenounproject.com/term/components/1286164'><img src='https://user-images.githubusercontent.com/74385/75975632-f9100d80-5f2c-11ea-8c20-72a98b8de15e.png' width='96'></a><br>
-</p>
+<p align='center'><br><a href='https://thenounproject.com/term/components/1286164'><img src='https://user-images.githubusercontent.com/74385/75975632-f9100d80-5f2c-11ea-8c20-72a98b8de15e.png' width='96'></a><br></p>
 
 <h1 align='center'>
 gatsby-remark-component
@@ -11,9 +9,10 @@ Embed components in React inside <em>div</em> wrappers.
 </p>
 
 <p align='center'>
-<a href='https://npmjs.com/packages/@rstacruz/gatsby-remark-component'><img src='https://img.shields.io/npm/v/@rstacruz/gatsby-remark-component?color=%23303030' alt='npm version badge'></a>
+<a href='https://npmjs.com/package/@rstacruz/gatsby-remark-component'>
+<img src='https://badge.fury.io/js/%40rstacruz%2Fgatsby-remark-component.svg' alt='npm version'>
+</a>
 </p>
-
 <br>
 
 A gatsby-transformer-remark plugin that change the AST node parent of a custom component to a div. This is an unofficial maintenance fork of [Hebilicious/gatsby-remark-component](https://github.com/Hebilicious/gatsby-remark-component) continued from its v1.1.3.
@@ -31,7 +30,7 @@ yarn add gatsby-transformer-remark @rstacruz/gatsby-remark-component
 This is the base settings, your components inside your markdown will be auto-detected.
 
 ```js
-//In your gatsby-config.js ...
+// gatsby-config.js
 plugins: [
   {
     resolve: "gatsby-transformer-remark",
@@ -42,6 +41,8 @@ plugins: [
 ]
 ```
 
+## Configuration
+
 You can explicitly declare the name of the components if you want to be strict.
 
 ```js
@@ -51,7 +52,7 @@ plugins: [
     options: {
       plugins: [
         {
-          resolve: "gatsby-remark-component",
+          resolve: "@rstacruz/gatsby-remark-component",
           options: { components: ["my-component", "other-component"] }
         }
       ]
