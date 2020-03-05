@@ -32,6 +32,10 @@
   "license": "MIT",
   "main": "dist/gatsby-remark-component.js",
   "module": "dist/gatsby-remark-component.module.js",
+  "publishConfig": {
+    "access": "public",
+    "exists": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rstacruz/gatsby-remark-component.git"
