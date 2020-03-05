@@ -11,7 +11,7 @@ Embed components in React inside <em>div</em> wrappers.
 </p>
 
 <p align='center'>
-<img src='https://img.shields.io/npm/v/@rstacruz/gatsby-remark-component?color=%23303030'>
+<a href='https://npmjs.com/packages/@rstacruz/gatsby-remark-component'><img src='https://img.shields.io/npm/v/@rstacruz/gatsby-remark-component?color=%23303030' alt='npm version badge'></a>
 </p>
 
 <br>
